@@ -19,8 +19,8 @@ func init() {
 }
 
 func main() {
-	http.Handle("/", http.FileServer(http.Dir(*staticPath)))
-	http.HandleFunc("/server/", func(w http.ResponseWriter, r *http.Request) {
+	http.Handle("/dash/", http.FileServer(http.Dir(*staticPath)))
+	http.HandleFunc("/dash/server/", func(w http.ResponseWriter, r *http.Request) {
 		module := r.URL.Query().Get("module")
 		if module == "" {
 			http.Error(w, "No module specified, or requested module doesn't exist.", 406)

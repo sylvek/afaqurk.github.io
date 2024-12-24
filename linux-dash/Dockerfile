@@ -28,9 +28,9 @@ RUN apk add --no-cache bash util-linux sysstat dcron
 
 
 # Copy only required web assets to root
-COPY app/index.html /
-COPY app/linuxDash.min.css /
-COPY app/linuxDash.min.js /
+COPY app/index.html /dash/
+COPY app/linuxDash.min.css /dash/
+COPY app/linuxDash.min.js /dash/
 
 EXPOSE 8888
 
